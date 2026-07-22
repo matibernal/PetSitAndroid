@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.PetSit" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/petsit_primary</item>
+        <item name="colorPrimaryDark">@color/petsit_primary_dark</item>
+        <item name="colorAccent">@color/petsit_accent</item>
+        <item name="android:windowBackground">@color/petsit_bg</item>
+        <item name="colorOnPrimary">@color/white</item>
+    </style>
+</resources>

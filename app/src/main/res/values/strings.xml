@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PetSit</string>
+
+    <string name="login_title">Iniciar sesión</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Contraseña</string>
+    <string name="login_button">Iniciar sesión</string>
+    <string name="crear_cuenta">¿No tenés cuenta? Creá una</string>
+
+    <string name="registro_title">Crear cuenta</string>
+    <string name="nombre_hint">Nombre</string>
+    <string name="apellido_hint">Apellido</string>
+    <string name="telefono_hint">Teléfono</string>
+    <string name="password_confirm_hint">Repetir contraseña</string>
+    <string name="registrarse_button">Crear cuenta</string>
+    <string name="ya_tengo_cuenta">Ya tengo cuenta</string>
+
+    <string name="mis_mascotas">Mis mascotas</string>
+    <string name="refugios">Refugios</string>
+    <string name="veterinarias">Veterinarias</string>
+    <string name="perfil">Perfil</string>
+    <string name="cerrar_sesion">Cerrar sesión</string>
+    <string name="agregar_mascota">Registrar mascota</string>
+
+    <string name="nombre_mascota_hint">Nombre</string>
+    <string name="raza_hint">Raza</string>
+    <string name="color_hint">Color</string>
+    <string name="descripcion_hint">Descripción</string>
+    <string name="guardar">Guardar</string>
+    <string name="tamano_chico">Chico</string>
+    <string name="tamano_mediano">Mediano</string>
+    <string name="tamano_grande">Grande</string>
+    <string name="llamar">Llamar</string>
+    <string name="whatsapp">WhatsApp</string>
+    <string name="ver_en_mapa">Ver en Maps</string>
+
+    <string name="error_generico">Ocurrió un error. Intentá de nuevo.</string>
+    <string name="error_login">Revisá tu email y contraseña.</string>
+    <string name="error_campos">Completá todos los campos.</string>
+    <string name="error_passwords">Las contraseñas no coinciden.</string>
+    <string name="sin_datos">No hay datos para mostrar todavía.</string>
+    <string name="cargando">Cargando…</string>
+</resources>
