@@ -3,7 +3,13 @@
     "allow": [
       "Bash(find . -maxdepth 3 -not -path '*/\\\\.*')",
       "Bash(ls \"C:\\\\Users\\\\matre\\\\OneDrive\\\\Documentos\\\\PetSit\" 2>&1 | head -50)",
-      "Bash(xargs -I{} echo {})"
+      "Bash(xargs -I{} echo {})",
+      "Read(//c/Users/matre/OneDrive/Documentos/**)",
+      "Bash(cp \"PetSit\\\\src\\\\main\\\\java\\\\ar\\\\edu\\\\davinci\\\\PetSit\\\\dto\\\\AdopcionDTO.java\" \"PetSitAndroid\\\\backend-para-tu-proyecto\\\\src\\\\main\\\\java\\\\ar\\\\edu\\\\davinci\\\\PetSit\\\\dto\\\\AdopcionDTO.java\")",
+      "Bash(cp \"PetSit\\\\src\\\\main\\\\java\\\\ar\\\\edu\\\\davinci\\\\PetSit\\\\dto\\\\CrearAdopcionRequestDTO.java\" \"PetSitAndroid\\\\backend-para-tu-proyecto\\\\src\\\\main\\\\java\\\\ar\\\\edu\\\\davinci\\\\PetSit\\\\dto\\\\CrearAdopcionRequestDTO.java\")",
+      "Bash(cp \"PetSit\\\\src\\\\main\\\\java\\\\ar\\\\edu\\\\davinci\\\\PetSit\\\\controller\\\\api\\\\ApiAdopcionController.java\" \"PetSitAndroid\\\\backend-para-tu-proyecto\\\\src\\\\main\\\\java\\\\ar\\\\edu\\\\davinci\\\\PetSit\\\\controller\\\\api\\\\ApiAdopcionController.java\")",
+      "Bash(cp \"PetSit\\\\src\\\\main\\\\java\\\\ar\\\\edu\\\\davinci\\\\PetSit\\\\security\\\\SecurityConfig.java\" \"PetSitAndroid\\\\backend-para-tu-proyecto\\\\src\\\\main\\\\java\\\\ar\\\\edu\\\\davinci\\\\PetSit\\\\security\\\\SecurityConfig.java\")",
+      "Bash(./mvnw.cmd -q -o compile)"
     ]
   }
 }
