@@ -19,9 +19,15 @@
     <string name="mis_mascotas">Mis mascotas</string>
     <string name="refugios">Refugios</string>
     <string name="veterinarias">Veterinarias</string>
+    <string name="adopciones">Adoptar</string>
     <string name="perfil">Perfil</string>
     <string name="cerrar_sesion">Cerrar sesión</string>
     <string name="agregar_mascota">Registrar mascota</string>
+    <string name="publicar_adopcion">Publicar en adopción</string>
+    <string name="ubicacion_hint">Ubicación (dirección o referencia)</string>
+    <string name="elegir_mascota">Elegí cuál de tus mascotas publicar</string>
+    <string name="sin_mascotas_para_adopcion">Registrá una mascota primero para poder publicarla en adopción.</string>
+    <string name="publicado_ok">Publicado.</string>
 
     <string name="nombre_mascota_hint">Nombre</string>
     <string name="raza_hint">Raza</string>

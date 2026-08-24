@@ -12,6 +12,9 @@
         android:id="@+id/nav_veterinarias"
         android:title="@string/veterinarias" />
     <item
+        android:id="@+id/nav_adopciones"
+        android:title="@string/adopciones" />
+    <item
         android:id="@+id/nav_perfil"
         android:title="@string/perfil" />
 </menu>

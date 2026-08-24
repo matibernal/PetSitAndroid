@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment;
 import ar.edu.davinci.petsit.mobile.R;
 import ar.edu.davinci.petsit.mobile.api.ApiClient;
 import ar.edu.davinci.petsit.mobile.databinding.ActivityHomeBinding;
+import ar.edu.davinci.petsit.mobile.ui.adopciones.AdopcionesFragment;
 import ar.edu.davinci.petsit.mobile.ui.mascotas.MascotasFragment;
 import ar.edu.davinci.petsit.mobile.ui.perfil.PerfilFragment;
 import ar.edu.davinci.petsit.mobile.ui.refugios.RefugiosFragment;
@@ -42,6 +43,9 @@ public class HomeActivity extends AppCompatActivity {
             return true;
         } else if (id == R.id.nav_veterinarias) {
             mostrarFragment(new VeterinariasFragment());
+            return true;
+        } else if (id == R.id.nav_adopciones) {
+            mostrarFragment(new AdopcionesFragment());
             return true;
         } else if (id == R.id.nav_perfil) {
             mostrarFragment(new PerfilFragment());

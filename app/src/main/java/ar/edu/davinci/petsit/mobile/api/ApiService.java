@@ -2,6 +2,8 @@ package ar.edu.davinci.petsit.mobile.api;
 
 import java.util.List;
 
+import ar.edu.davinci.petsit.mobile.model.Adopcion;
+import ar.edu.davinci.petsit.mobile.model.CrearAdopcionRequest;
 import ar.edu.davinci.petsit.mobile.model.LoginRequest;
 import ar.edu.davinci.petsit.mobile.model.Mascota;
 import ar.edu.davinci.petsit.mobile.model.RegistroRequest;
@@ -53,4 +55,15 @@ public interface ApiService {
 
     @GET("petsit/api/veterinarias/{id}")
     Call<Veterinaria> getVeterinaria(@Path("id") long id);
+
+    // ---------- Adopciones ----------
+
+    @GET("petsit/api/adopciones")
+    Call<List<Adopcion>> getAdopciones();
+
+    @GET("petsit/api/adopciones/{id}")
+    Call<Adopcion> getAdopcion(@Path("id") long id);
+
+    @POST("petsit/api/adopciones")
+    Call<Adopcion> crearAdopcion(@Body CrearAdopcionRequest request);
 }
