@@ -9,7 +9,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import ar.edu.davinci.petsit.mobile.R;
 import ar.edu.davinci.petsit.mobile.api.ApiClient;
-import ar.edu.davinci.petsit.mobile.databinding.ActivityLoginBinding;
+import com.petsit.app.LoginView;
+import com.petsit.app.MainActivity;
 import ar.edu.davinci.petsit.mobile.model.LoginRequest;
 import ar.edu.davinci.petsit.mobile.model.Usuario;
 import ar.edu.davinci.petsit.mobile.ui.home.HomeActivity;
@@ -21,15 +22,12 @@ import retrofit2.Response;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private ActivityLoginBinding binding;
+    private LoginView loginView;
     private SessionManager sessionManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityLoginBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
-
         // ApiClient necesita el Context para el CookieJar; se inicializa acá
         // porque esta es la primera Activity que arranca la app.
         ApiClient.init(this);
@@ -41,14 +39,15 @@ public class LoginActivity extends AppCompatActivity {
             return;
         }
 
-        binding.btnLogin.setOnClickListener(v -> intentarLogin());
-        binding.tvCrearCuenta.setOnClickListener(v ->
-                startActivity(new Intent(this, RegistroActivity.class)));
+        loginView = new LoginView();
+        loginView.show(this, this::intentarLogin,
+                () -> startActivity(new Intent(this, RegistroActivity.class)),
+                () -> startActivity(new Intent(this, MainActivity.class)));
     }
 
-    private void intentarLogin() {
-        String correo = String.valueOf(binding.etEmail.getText()).trim();
-        String contrasena = String.valueOf(binding.etPassword.getText()).trim();
+    private void intentarLogin(String correo, String contrasena) {
+        correo = correo.trim();
+        contrasena = contrasena.trim();
 
         if (TextUtils.isEmpty(correo) || TextUtils.isEmpty(contrasena)) {
             Toast.makeText(this, R.string.error_campos, Toast.LENGTH_SHORT).show();
@@ -87,8 +86,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void mostrarCargando(boolean cargando) {
-        binding.progressBar.setVisibility(cargando ? android.view.View.VISIBLE : android.view.View.GONE);
-        binding.btnLogin.setEnabled(!cargando);
+        loginView.setLoading(cargando);
     }
 
     private void irAHome() {
