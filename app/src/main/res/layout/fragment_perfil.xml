@@ -31,10 +31,18 @@
         android:textSize="14sp" />
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnMisSolicitudes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/petsit_primary"
+        android:text="@string/mis_solicitudes" />
+
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnCerrarSesion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="16dp"
         android:backgroundTint="@color/danger"
         android:text="@string/cerrar_sesion" />
 

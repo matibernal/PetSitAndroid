@@ -34,6 +34,7 @@
 
         <activity android:name=".ui.adopciones.AdopcionDetalleActivity" android:exported="false" />
         <activity android:name=".ui.adopciones.PublicarAdopcionActivity" android:exported="false" />
+        <activity android:name=".ui.postulaciones.PostulacionesActivity" android:exported="false" />
 
     </application>
 
