@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment;
 
 import ar.edu.davinci.petsit.mobile.databinding.FragmentPerfilBinding;
 import ar.edu.davinci.petsit.mobile.ui.login.LoginActivity;
+import ar.edu.davinci.petsit.mobile.ui.postulaciones.PostulacionesActivity;
 import ar.edu.davinci.petsit.mobile.util.SessionManager;
 
 /** Equivale a perfil.html; acá se ve el usuario logueado y se cierra sesión. */
@@ -35,6 +36,9 @@ public class PerfilFragment extends Fragment {
         sessionManager = new SessionManager(requireContext());
         binding.tvNombre.setText(sessionManager.getNombre());
         binding.tvEmail.setText(sessionManager.getCorreo());
+
+        binding.btnMisSolicitudes.setOnClickListener(v ->
+                startActivity(new Intent(getContext(), PostulacionesActivity.class)));
 
         binding.btnCerrarSesion.setOnClickListener(v -> {
             sessionManager.cerrarSesion();

@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Sin iconos para evitar depender de vector art aquí: agregalos luego
-     con res > New > Vector Asset y el atributo android:icon por item. -->
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/nav_mascotas"
-        android:title="@string/mis_mascotas" />
+        android:icon="@drawable/ic_nav_mascotas"
+        android:title="@string/nav_mascotas" />
     <item
         android:id="@+id/nav_refugios"
+        android:icon="@drawable/ic_nav_refugios"
         android:title="@string/refugios" />
     <item
         android:id="@+id/nav_veterinarias"
+        android:icon="@drawable/ic_nav_veterinarias"
         android:title="@string/veterinarias" />
     <item
+        android:id="@+id/nav_adopciones"
+        android:icon="@drawable/ic_nav_adopciones"
+        android:title="@string/adopciones" />
+    <item
         android:id="@+id/nav_perfil"
+        android:icon="@drawable/ic_nav_perfil"
         android:title="@string/perfil" />
 </menu>
