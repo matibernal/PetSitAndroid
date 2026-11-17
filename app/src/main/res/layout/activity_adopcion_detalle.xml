@@ -100,6 +100,16 @@
                 android:layout_marginTop="4dp"
                 android:textColor="@color/black" />
 
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPostularme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:backgroundTint="@color/petsit_primary"
+                android:padding="12dp"
+                android:text="@string/postularme"
+                android:visibility="gone" />
+
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

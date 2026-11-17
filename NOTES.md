@@ -39,6 +39,16 @@ tus repositorios, ni tus entidades). Nombres de endpoint elegidos:
 | GET    | `/petsit/api/refugios/{id}`   | Detalle de un refugio                                | público |
 | GET    | `/petsit/api/veterinarias`    | Listado de veterinarias **aprobadas**                | público |
 | GET    | `/petsit/api/veterinarias/{id}` | Detalle de una veterinaria                         | público |
+| GET    | `/petsit/api/adopciones`      | Adopciones activas                                   | público |
+| GET    | `/petsit/api/adopciones/{id}` | Detalle de una adopción                              | público |
+| POST   | `/petsit/api/adopciones`      | Publicar una mascota propia en adopción              | sesión |
+| GET    | `/petsit/api/postulaciones/mias`      | Postulaciones que envié                      | sesión |
+| GET    | `/petsit/api/postulaciones/recibidas` | Postulaciones a mis adopciones (con contacto) | sesión |
+| POST   | `/petsit/api/postulaciones`   | Postularme a una adopción (409 si ya me postulé, 403 si es mía) | sesión |
+
+Para Postulaciones también hay que copiar `repository/PostulacionRepository.java`
+y `service/Postulacion/PostulacionService*.java` (tienen 2 métodos nuevos:
+`findRecibidas` y `yaPostulado`).
 
 Todos devuelven JSON plano (a través de DTOs, ver punto 3), nunca HAL ni
 las entidades JPA directamente.
